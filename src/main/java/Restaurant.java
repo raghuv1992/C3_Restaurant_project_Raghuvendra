@@ -16,6 +16,10 @@ public class Restaurant {
         this.closingTime = closingTime;
     }
 
+    public static double getOrderValue(List<String> items) {
+        return 0;
+    }
+
     public boolean isRestaurantOpen() {
      LocalTime currentTime = getCurrentTime();
      if(currentTime.compareTo(openingTime) >= 0 && currentTime.compareTo(closingTime) <0)
