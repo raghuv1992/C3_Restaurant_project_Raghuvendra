@@ -16,8 +16,14 @@ public class Restaurant {
         this.closingTime = closingTime;
     }
 
-    public static double getOrderValue(List<String> items) {
-        return 0;
+    public double getOrderValue(List<String> items) {
+        double total_order_value = 0;
+        for(String item:items)
+        {
+            Item obj = findItemByName(item);
+            total_order_value = total_order_value+ obj.getPrice();
+        }
+        return total_order_value;
     }
 
     public boolean isRestaurantOpen() {

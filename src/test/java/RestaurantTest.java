@@ -84,7 +84,7 @@ class RestaurantTest {
         List<String> items = new ArrayList<String>();
         items.add("Sweet corn soup");
         items.add("Vegetable lasagne");
-        double order_value = Restaurant.getOrderValue(items);
+        double order_value = restaurant.getOrderValue(items);
         assertTrue(order_value > 0);
         assertEquals(388.00,order_value);
     }
